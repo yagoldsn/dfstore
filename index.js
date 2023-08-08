@@ -23,10 +23,10 @@ const optionsHandlebars = handlebars.create({
   });
   app.engine("handlebars", optionsHandlebars.engine);
   app.set("view engine", "handlebars");
-  
+
 //rotas
 app.use("/",(req,res)=>{
-    res.send("pagina principal")
+    res.render("inicial/index")
 })
 
 app.listen(3000,()=>{
