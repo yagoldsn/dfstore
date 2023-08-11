@@ -4,4 +4,7 @@ const sequelize = new Sequelize("dfstore","root","mulnbo182",{//nome do database
     dialect: 'mysql' //linguagem de banco utilizada, porque sequelize trabalha com varios tipos de banco
 })
 
-exports.sequelize = sequelize;
+exports.sequelize = {
+    sequelize: sequelize,
+    Sequelize: Sequelize
+}
