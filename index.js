@@ -4,7 +4,7 @@ const handlebars = require("express-handlebars");
 
 //configuração
 
-app.set(express.static('imagens')); //definindo a pasta onde ira buscar caminhos de imagem no handlebars
+app.use(express.static('public')); //definindo a pasta onde ira buscar caminhos de imagem, css e outros arquiv estaticos no handlebars
 
 
 //express=handlebars
