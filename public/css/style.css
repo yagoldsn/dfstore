@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    align-items: center;
+    /*background-image: linear-gradient(2deg, #282A35, white);*/
+    background-color: #282A35;
+    display: flex;
+    height: 70px;
+    justify-content: first baseline;
+    width: 100vw;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+}
+
+.menu li{
+    list-style: none;
+    font-size: 20px;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
