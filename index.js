@@ -4,6 +4,8 @@ const handlebars = require("express-handlebars");
 
 //configuração
 
+app.set(express.static('imagens')); //definindo a pasta onde ira buscar caminhos de imagem no handlebars
+
 
 //express=handlebars
 const optionsHandlebars = handlebars.create({
@@ -11,6 +13,7 @@ const optionsHandlebars = handlebars.create({
   });
   app.engine("handlebars", optionsHandlebars.engine);
   app.set("view engine", "handlebars");
+  app.use(express.static("imagens"));
 
 //rotas
 app.use("/",(req,res)=>{
