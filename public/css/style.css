@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 header{
@@ -15,8 +17,10 @@ header{
 }
 
 .menu{
+    display: flex;
+    justify-content: space-between;
     position: fixed;
-    top: 0;
+    padding: 1.5rem 0.5rem;
 }
 
 .menu li{
@@ -30,8 +34,22 @@ header{
     align-items: center;
 }
 .menu a {
-    display: block;
-    padding: 10px 20px;
     color: white;
+    display: block;
+    padding: 10px 15px;
     text-decoration: none;
   }
+.login{
+    display: flex;
+    align-items: center;
+    
+}
+
+.login button{
+    border: none;
+    font-size: 19px;
+    background-color: rgba(252, 224, 7, 0.797);
+    color: white;
+    padding: 5% 15px;
+
+}
