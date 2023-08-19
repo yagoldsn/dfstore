@@ -1,55 +1,145 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+/*definindo corres primarias através de variavel para ser utilizada no site */
+
+:root{
+    --cor-principal: #282a35;
+    --cor-secundaria: rgba(252, 224, 7, 0.797);
+    --cor-ternaria: #fff;
+}
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header{
-    align-items: center;
-    /*background-image: linear-gradient(2deg, #282A35, white);*/
-    background-color: #282A35;
-    display: flex;
-    height: 70px;
-    justify-content: first baseline;
-    width: 100vw;
+    background-color: var(--cor-principal);
+    box-shadow: 0px 3px 10px #464646;
+
 }
 
 .menu{
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    padding: 1.5rem 0.5rem;
+    height: 100%;
+    max-height: 70px;
+    padding: 1.5rem 1rem;
 }
 
-.menu li{
+.logo{
+    align-items: center;
+    display: flex;
+}
+
+.menu-lista{
+    align-items: center;
+    display: flex;
+}
+
+.menu-lista ul{
+    display: flex;
+    justify-content: center;
     list-style: none;
-    font-size: 20px;
 }
 
-.menu ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.nav-item {
+    margin: 0 ;
 }
-.menu a {
-    color: white;
+
+.nav-link{
+    color: #fff;
     display: block;
-    padding: 10px 15px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    padding: 10px;
     text-decoration: none;
-  }
+}
+
+.nav-item:hover{
+    background-color: var(--cor-secundaria);
+}
+
 .login{
-    display: flex;
     align-items: center;
-    
+    display: flex;
 }
 
 .login button{
+    background-color: var(--cor-secundaria);
     border: none;
-    font-size: 19px;
-    background-color: rgba(252, 224, 7, 0.797);
-    color: white;
-    padding: 5% 15px;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
 
+.login button a{
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+/*inicio stilos do menu mobile*/
+.mobile-menu-icon{
+    display: none;
+}
+
+.mobile-menu{
+    background-color: var(--cor-principal);
+    display: none;
+    height: 100vh;
+    margin-top: 1px;
+    max-width: 250px;
+    width: 100%;
+    
+}
+.mobile-menu ul{
+    list-style-type: none;
+    padding: 0;    
+}
+.mobile-menu .nav-item{
+    background-color: var(--cor-principal);
+    border-bottom: 1px solid var(--cor-ternaria);
+    margin: 0;
+}
+.mobile-menu .nav-link{
+    color: var(--cor-ternaria);
+    display:block;
+    padding: 10px;
+    text-decoration: none;
+    transition: background .3s; /*criando uma transição entre os itens*/
+    text-transform: uppercase;
+    
+}
+.mobile-menu .nav-item:hover{
+    background-color: var(--cor-secundaria);
+}
+
+/*fim stilos do menu mobile*/
+
+/* media de ajuste de responsividade do menu para mobile*/
+@media screen and (max-width: 730px) {
+    .menu{
+        padding: 1.5rem 1rem;
+    }   
+    .menu-lista{
+        display: none;
+    }
+    .login{
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: flex;
+        align-items: center;
+    }
+    .mobile-menu-icon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .open{
+        display: block;
+        
+    
 }
