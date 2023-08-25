@@ -19,8 +19,9 @@ header{
     box-shadow: 0px 3px 10px #464646;
 }
 body{
-    overflow: hidden;
     background-color: var(--cor-ternaria);
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .menu{
@@ -96,7 +97,7 @@ body{
     background-color: var(--cor-principal);
     display: none;
     height: 100vh;
-    margin-top: 1px;
+    margin-top: 1px; 
     /*max-width: 250px;*/
     width: 170px;
     
@@ -150,4 +151,4 @@ body{
     
     .open{
         display: block;
-}
+    }
